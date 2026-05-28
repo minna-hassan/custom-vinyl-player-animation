@@ -1,113 +1,100 @@
-# 🎵 Vinyl Music Player
+# 🎵 Vinyl Record Player Animation 
 
-A premium animated Flutter music player UI inspired by classic vinyl record players — built entirely using Flutter’s rendering system, smooth animations, and custom-painted components.
+A minimal Flutter music player UI inspired by classic vinyl record players, built using `CustomPainter`, animations, and layered UI composition.
 
-This project focuses on recreating a rich and immersive music experience with handcrafted visuals, realistic motion, and scalable UI architecture.
-
----
-
-## ✨ Project Overview
-
-The goal of this project was to explore how far Flutter’s rendering and animation capabilities can be pushed without depending on external graphic assets.
-
-Instead of using images, almost every visual element is drawn manually using `CustomPainter`, layered widgets, and animation controllers to create a polished vinyl-style interface.
+The project explores Flutter’s rendering system by creating a fully custom-drawn vinyl record with smooth playback animation and responsive layout behavior.
 
 ---
-
 ## 🎬 Preview
 
-> Add your GIF or screenshots here for the best presentation impact.
+<img width="1040" height="878" alt="Animation" src="https://github.com/user-attachments/assets/a7390e80-5d60-4aa5-ae5b-6a2c03488560" />
+---
 
-```md
-![Preview](preview.gif)
-```
+## ✨ Features
+
+- Custom vinyl record built using `CustomPainter`
+- Smooth rotation animation during playback
+- Play / pause state-driven UI updates
+- Mechanical tone arm with layered composition
+- Responsive layout for portrait and landscape modes
+- Dark themed UI with gradients and depth effects
 
 ---
 
-## 🎯 Core Features
+## 🎨 Custom Painter Rendering
 
-### 🎨 Fully Custom Painted UI
-The vinyl disk, grooves, tone arm, stylus, and decorative elements are rendered entirely using Flutter Canvas APIs with `CustomPainter`.
+The vinyl record is fully drawn using Flutter’s Canvas API, including:
 
-### 🔄 Smooth Animation System
-Implemented using:
-- `AnimationController`
-- Explicit animations
-- Implicit animations
-- `RotationTransition`
+- Record grooves
+- Center label
+- Outer rim detailing
+- Lighting and shadow effects
 
-The vinyl rotation and UI interactions are designed to feel fluid and natural.
-
-### 📱 Responsive Layout
-The UI adapts across different screen sizes using responsive scaling techniques and layout calculations.
-
-Supports:
-- Mobile devices
-- Tablets
-- Desktop screens
-
-### 🌗 Premium Visual Design
-Focused heavily on creating a modern premium aesthetic using:
-- Dark themed interface
-- Soft glow effects
-- Layered depth
-- Smooth gradients
-- Clean spacing and composition
-
-### 🧩 Modular Architecture
-The project structure is organized into reusable and scalable components with separated animation and UI logic.
+No image assets are used — everything is procedurally rendered.
 
 ---
 
-## 🛠 Technologies Used
+## 🔄 Animation System
+
+Built using `AnimationController` to handle:
+
+- Continuous vinyl rotation
+- Smooth play/pause transitions
+- Synchronized UI state updates
+
+---
+
+## 📱 Responsive Layout
+
+The UI adapts across screen sizes using `MediaQuery`:
+
+- Portrait layout (`portrait_mode.dart`)
+- Landscape layout (`landscape_mode.dart`)
+- Scalable positioning and spacing
+
+---
+
+## 🧩 Project Structure
+
+- `main.dart` – App entry point and state management
+- `portrait_mode.dart` – Vertical UI layout
+- `landscape_mode.dart` – Horizontal UI layout
+- `music_player_painter.dart` – Vinyl rendering logic
+- `record_stylus_painter.dart` – Tone arm & stylus drawing
+- `record_stylus_stack.dart` – Mechanical assembly layout
+
+---
+
+## 🛠 Tech Stack
 
 - Flutter
 - Dart
 - CustomPainter
-- AnimationController
-- RotationTransition
 - Canvas API
-
----
-
-## 🧠 What I Learned
-
-This project helped me improve my understanding of:
-
-- Advanced `CustomPainter` workflows
-- Animation orchestration in Flutter
-- Explicit vs implicit animations
-- Performance-aware UI rendering
-- Responsive UI structuring
-- Creating complex visuals without assets
+- AnimationController
+- Matrix4 Transforms
 
 ---
 
 ## 🚀 Getting Started
 
-Clone the repository and run the project locally:
-
 ```bash
-git clone <your-repository-url>
-cd vinyl-music-player
+git clone <your-repo-url>
+cd custom-vinyl-player
 flutter pub get
 flutter run
 ```
 
 ---
 
-## 💡 Project Highlights
+## 🧠 Notes
 
-Unlike traditional music player UIs that rely heavily on image assets, this project builds the interface almost entirely from code using Flutter’s rendering engine.
-
-This approach makes the UI:
-- Lightweight
-- Scalable
-- Highly customizable
-- Resolution independent
+This project was created to explore Flutter’s capability for building rich animated UIs using only code-based rendering techniques.
 
 ---
 
-## ⭐ Support
+## ⭐ License
 
-If you liked this project, consider giving it a ⭐ on GitHub.
+Free to use for learning and personal projects.
+
+If you use this project or its parts, credit is appreciated.
